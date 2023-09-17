@@ -1,0 +1,168 @@
+/* Define a fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body{
+    position: relative;
+    box-sizing: border-box;
+    /* color:hsl(231, 7%, 60%); */
+    background-color: hsl(234, 29%, 20%) ;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    background-color: hsl(0, 0%, 100%);
+    margin: 70px auto 30px;
+    width: 850px;
+    height: 600px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    position:relative;
+    visibility: visible; 
+
+    /* Add animation properties */
+    animation-name: fadeIn;
+    animation-duration: 1s; /* Duration of the animation */
+    animation-timing-function: ease; /* Timing function for smooth easing */
+    animation-fill-mode: both; /* Keep the final state of the animation */
+}
+
+.text-container{
+    padding: 30px;
+}
+.join{
+    color:#FF6155;
+    font-weight: 700;
+}
+.hearder{
+    color:hsl(234, 29%, 20%);
+}
+
+.sub-text-container{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.email-hearder{
+    font-size: 12px;
+    font-weight: 700;
+    color:hsl(234, 29%, 20%);
+}
+#email{
+    position: relative;
+    width:300px;
+    border:0.5px solid hsl(234, 29%, 20%);
+    border-radius:10px;
+    resize: none;
+    padding:20px 10px 20px 10px;
+    margin-bottom: 18px;
+    background-color:transparent;
+    z-index: 10;
+    outline: none;
+}
+
+#email:focus, #email:active {
+    background: transparent;
+}
+#float{
+    position: absolute;
+    bottom:219px;
+    left: 195px;
+    color:#FF6155;
+    background-color:hsl(0, 0%, 100%);
+    padding-left: 5px;
+    padding-right: 5px;
+    z-index: 1111;
+    transition: top 0.2s;
+}
+
+
+.btn{
+    display: block;
+    padding:20px 0 20px 0;
+    width: 320px;
+    border: none;
+    background: hsl(234, 29%, 20%);
+    border-radius:10px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-container p span{
+    position: relative;
+    top:4px;
+    margin-right: 5px;
+}
+
+
+.error{
+    border: 1px solid #FF6155;
+}
+
+ .pop-container{
+    position: absolute;
+    top:-11%;
+    width: 100%;
+    height: 100vh ;
+    position: absolute;
+    background: hsl(234, 29%, 20%);
+    text-align: center;
+    visibility:hidden;
+ }
+
+ .popover{
+   width: 350px;
+   height: 300px;
+   background: hsl(0, 0%, 100%);
+   padding: 20px;
+   margin: 17% auto 40px;
+   text-align: center;
+   border-radius: 20px;
+   opacity: 0;
+   transform: translateY(-40px);
+   transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.btn-dis{
+    padding:20px 0 20px 0;
+    width: 320px;
+    border: none;
+    margin-top: 20px;
+    background: hsl(234, 29%, 20%);
+    border-radius:10px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-dis h1 p {
+    color:hsl(234, 29%, 20%) !important;
+
+}
+.openpop{
+    visibility: visible;
+}
+
+.closepop{
+    visibility: hidden;
+}
+
+.popover.openpop {
+    opacity: 1;
+    transform: translateY(0);
+}
+

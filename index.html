@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+ <div class="main-container">
+  <div class="text-container">
+    <h1 class = 'hearder'>Stay updated!</h1>
+    <p class ='join'>Join 60,000+ product managers receiving monthly updates on:</p>
+
+    <!-- Another container so it will be easy for independent styling -->
+    <div class="sub-text-container">
+    <p><span><img src="./assets/images/icon-list.svg" alt=""></span>Product discovery and building what matters</p>
+    <p><span><img src="./assets/images/icon-list.svg" alt=""></span>Measuring to ensure updates are a success</p>
+    <p><span><img src="./assets/images/icon-list.svg" alt=""></span>And much more!</p>
+    </div>
+    <!-- input section -->
+    <p class ='email-hearder'>Email Address</p>
+    <input type="email" name ="email" placeholder="Enter your email" id ="email">
+    <div id = 'float'></div>
+    <button class ='btn' onclick="popOver()">Subscribe to monthly newsletter</button>
+  </div>
+  <div class="svg-container">
+    <img src="./assets/images/illustration-sign-up-desktop.svg" alt="desktop">
+  </div>
+ </div>
+ <!-- popover section -->
+ <div class="pop-container" id = "pop-container">
+      <div class="popover" id = popover>
+        <img src="./assets/images/icon-success.svg" alt="success icon">
+        <h1 class="popover-header">Thanks for subscribing!</h1>
+        <p>A confirmation mail has been sent to your email<span id = 'myMail'></span>. <br /> Please open it and click the button to 
+            confirm 
+        </p>
+        <button class ='btn-dis' id = "btn" onclick="closePop()">Dismiss meessage</button>
+      </div>
+ </div>
+ <!-- popovr section ends here -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Dominic Bassee</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
